@@ -12,19 +12,19 @@ const password = getInput(2)
 let invalidEmail = username + ' is not a valid email address.  Please use your ".prsvr@gmail.com" or "@perseverenow.org" email address.'
 let invalidPassword = 'Please enter a valid password.  Passwords must be 8 characters long and include both capital and lowercase letters.'
 
-if (passwordMatches(username, password)){
+if (passwordMatches(username, password)) {
   return console.log('You are now logged in.  Welcome to Persevere.')
-}else if (isRegisteredUser(username, password)){
+}else if (isRegisteredUser(username, password)) {
   return console.log('You have entered an incorrect password.  The FBI and local law enforcement have been notified.')
-}else if (isValidEmail(username) && isValidPassword(password)){
+}else if (isValidEmail(username) && isValidPassword(password)) {
   return console.log('You are now registered as a Persevere user.  Please log in using your new username and password.')
 }
 // 6. if both the email and password are invalid, provide an appropriate message about both
-else if (!isValidEmail(username) && !isValidPassword(password)){
+else if (!isValidEmail(username) && !isValidPassword(password)) {
   return console.log(invalidEmail + '  ' + invalidPassword)
-}else if (!isValidEmail(username)){
+}else if (!isValidEmail(username)) {
   return console.log(invalidEmail)
-}else if (!isValidPassword(password)){
+}else (!isValidPassword(password)) {
   return console.log(invalidPassword)
 }
 
